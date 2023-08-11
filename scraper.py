@@ -1,7 +1,13 @@
 import requests
 import pandas as pd
-import numpy as np
 from bs4 import BeautifulSoup
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+USER = os.getenv("USER")
+PASS = os.getenv("PASS")
 
 
 def iniciar_sesion(user, password):
@@ -96,7 +102,9 @@ def generar_semestres(start, end):
 
 
 def obtener_calificaciones(id_alumno, ciclo_inicio, ciclo_fin):
-    session = iniciar_sesion(user="0212627", password="Cho@ky1127")
+    print(USER)
+    print(PASS)
+    session = iniciar_sesion(user=USER, password=PASS)
 
     ciclo_fin = 1232 if ciclo_fin > 1232 else ciclo_fin
     semestres = generar_semestres(ciclo_inicio, ciclo_fin)
