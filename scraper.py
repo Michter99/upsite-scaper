@@ -106,7 +106,7 @@ def obtener_calificaciones(id_alumno, ciclo_inicio, ciclo_fin):
     print(PASS)
     session = iniciar_sesion(user=USER, password=PASS)
 
-    ciclo_fin = 1232 if ciclo_fin > 1232 else ciclo_fin
+    ciclo_fin = 1242 if ciclo_fin > 1242 else ciclo_fin
     semestres = generar_semestres(ciclo_inicio, ciclo_fin)
 
     df_full = pd.DataFrame()
