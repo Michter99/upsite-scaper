@@ -102,8 +102,6 @@ def generar_semestres(start, end):
 
 
 def obtener_calificaciones(id_alumno, ciclo_inicio, ciclo_fin):
-    print(USER)
-    print(PASS)
     session = iniciar_sesion(user=USER, password=PASS)
 
     ciclo_fin = 1242 if ciclo_fin > 1242 else ciclo_fin
